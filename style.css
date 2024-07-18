@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    color: white;
+}
 img{
     width: 40px;
 }
@@ -34,15 +38,53 @@ header a{
     width: 200px;
 }
 .search-wrap input::placeholder{
-    color:rgb(8, 0, 255); ;
+    color:rgb(23, 17, 196);
 }
 .search-wrap input:focus{
     outline: none;
 }
-.search-wrap .button{
-    background-color: rgb(8, 0, 255);
+.button{
+    background-color: rgb(23, 17, 196);
     border: none;
     color: white;
     margin-left: 10px;
     border-radius: 5px;
+    padding: 5px;
+}
+.main-content{
+    background-image: url("./background.jpg");
+    height: calc(100vh - 60px);
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+    padding-top: 30px;
+}
+.line{
+    border-left: 1px solid white;
+    margin-left: 20px;
+ 
+}
+.right{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    display: grid;
+    /* grid-template-columns: 200px;
+    grid-template-rows: 176px; */
+}
+.right *{
+    margin: 0;
+}
+.book-now{
+    justify-self: start;
+    align-self:self-start;
+    padding: 10px;
+}
+.invisible{
+    visibility: hidden;
 }
