@@ -2,7 +2,7 @@ body{
     margin: 0;
     color: white;
 }
-img{
+img:not(.picture){
     width: 40px;
 }
 header{
@@ -79,8 +79,33 @@ input:focus,textarea:focus{
 
 }
 .home-content{
-    grid-template-columns: 200px;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 176px auto 1fr;
+}
+.search-result{
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    grid-column-start: 2;
+    padding-right: 30px;
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
+    align-items: start;
+    justify-items: end;
+    display:grid;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+.result-card{
+    width: 300px;
+    background-color: white;
+    color: #333;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.result-card * {
+    padding-top: 10px;
+    margin-bottom: 10px!important;
 }
 .about-content{
     grid-template-columns: 0.8fr;
@@ -124,7 +149,7 @@ input:focus,textarea:focus{
     border-radius: 5px;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 30px auto auto ;
+    grid-template-rows: 30px 30px auto ;
     gap: 10px;
     align-self: self-start;
 }
@@ -132,6 +157,7 @@ input:focus,textarea:focus{
     grid-row-start: 1;
     grid-row-end: span 3;
 }
+
 .team > div > button{
     align-self:self-start;
     
@@ -156,4 +182,7 @@ input:focus,textarea:focus{
 .input-wrap textarea::placeholder
 {
     color:white;
+}
+.picture{
+    width: 100%;
 }
