@@ -54,6 +54,7 @@ header a{
 .main-content{
     background-image: url("./background.jpg");
     height: calc(100vh - 60px);
+    background-size: cover;
 }
 
 .main-content{
@@ -74,8 +75,19 @@ header a{
     grid-column-start: 2;
     grid-column-end: span 2;
     display: grid;
-    /* grid-template-columns: 200px;
-    grid-template-rows: 176px; */
+
+}
+.home-content{
+    grid-template-columns: 200px;
+    grid-template-rows: 176px auto 1fr;
+}
+.about-content{
+    grid-template-columns: 0.8fr;
+    grid-template-rows: 50px auto 1fr;
+    gap: 50px;
+}
+.about-note{
+  padding: 20px;
 }
 .right *{
     margin: 0;
@@ -84,7 +96,33 @@ header a{
     justify-self: start;
     align-self:self-start;
     padding: 10px;
+    margin-top: 50px;
 }
 .invisible{
     visibility: hidden;
+}
+.half-transparent-background{
+    background-color: rgba(47, 44, 44, 0.3);
+}
+.team{
+    display: grid;
+    grid-template-columns: 150px repeat(3,1fr);
+    gap: 20px;
+}
+.team > div{
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 30px auto auto ;
+    gap: 10px;
+    align-self: self-start;
+}
+.team > div > img{
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+.team > div > button{
+    align-self:self-start;
+    
 }
