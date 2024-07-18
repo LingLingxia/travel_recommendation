@@ -1,0 +1,48 @@
+img{
+    width: 40px;
+}
+header{
+    background-color: #333;
+    color: white;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+    padding: 10px;
+}
+header a{
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+.search-wrap{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.search-wrap input{
+    border: none;
+    width: 200px;
+}
+.search-wrap input::placeholder{
+    color:rgb(8, 0, 255); ;
+}
+.search-wrap input:focus{
+    outline: none;
+}
+.search-wrap .button{
+    background-color: rgb(8, 0, 255);
+    border: none;
+    color: white;
+    margin-left: 10px;
+    border-radius: 5px;
+}
